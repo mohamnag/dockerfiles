@@ -53,9 +53,6 @@ RUN a2enmod php5
 RUN pecl upgrade radius
 RUN pecl upgrade imagick
 
-RUN mkdir -p /opt/bmp_log
-RUN mkdir -p /opt/bmp_root
-
 WORKDIR /
 
 # cleanup some unwanted packages
