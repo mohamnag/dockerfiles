@@ -49,7 +49,7 @@ ENV MAKEOPTS -j3
 ENV EXTRA_LIBS -lstdc++ -lssl -lcrypto
 ENV PHP_BUILD_CONFIGURE_OPTS --with-gettext --with-gmp-dir=/usr --with-mhash --enable-cli --with-libxml-dir=/usr --with-bz2 --enable-calendar --disable-dba --with-t1lib --with-xpm --with-freetype --enable-gd-native-ttf --with-icu-dir=/usr  --with-libedit --enable-mbregex --enable-sysvmsg --enable-wddx --with-iconv-dir=/usr  --with-pcre-regex --enable-fileinfo --enable-pdo --enable-simplexml --disable-cgi --disable-fpm --enable-intl --with-apxs2 --enable-maintainer-zts
 RUN php-build --pear 5.3.29 /usr/local
-RUN cp /usr/lib/apache2/modules/libphp5.so /usr/local/libexec
+RUN a2enmod php5
 RUN pecl upgrade radius
 RUN pecl upgrade imagick
 
