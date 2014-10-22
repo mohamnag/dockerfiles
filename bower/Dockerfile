@@ -1,10 +1,7 @@
-FROM node
+FROM node:0.10.32
 
 MAINTAINER Ron Waldon <jokeyrhyme@gmail.com>
 
-RUN npm install -g bower@1.3
+RUN npm install -g bower@1.3.12
 
-VOLUME ['/usr/app/src']
-WORKDIR /usr/app/src
-
-CMD bower update
+ENTRYPOINT ["bower"]
