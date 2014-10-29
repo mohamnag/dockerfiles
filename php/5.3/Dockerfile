@@ -51,6 +51,7 @@ ENV PHP_BUILD_CONFIGURE_OPTS --with-gettext --with-gmp-dir=/usr --with-mhash --e
 RUN php-build --pear 5.3.29 /usr/local
 RUN a2enmod php5
 RUN pecl upgrade radius
+RUN apt-get install imagemagick graphicsmagick libmagickwand-dev
 RUN pecl upgrade imagick
 
 WORKDIR /
